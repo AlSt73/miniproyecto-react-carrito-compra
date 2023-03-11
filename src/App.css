@@ -58,7 +58,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   border: 1px solid gray;
-  border-radius: 13px;
+  border-radius: 13px 3px;
   padding: 11px;
 }
 
@@ -103,6 +103,8 @@ body {
 .footer{
   margin: 13px;
   text-align: center;
+  border-top: 1px solid gray;
+  padding: 13px;
 }
 
 .total{
@@ -118,4 +120,23 @@ body {
   width: 110px;
   padding: 10px;
   margin-top: 13px;
+}
+
+.bag-container div {
+  display: flex;
+  justify-content: center;
+}
+
+.bag-container div .btn-reset{
+  padding: 11px;
+  border-radius: 13px 40px;
+  border:0;
+  box-shadow: 3px 3px black;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.bag-container div .btn-reset:hover{
+  box-shadow: 5px 5px black;
+  transform: scale(2,2);
+
 }
