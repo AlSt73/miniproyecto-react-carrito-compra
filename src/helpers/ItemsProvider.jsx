@@ -36,6 +36,7 @@ export const ItemsProvider = ({ children }) => {
     ];
     const [items, dispatch] = useReducer(ReducerShop, [], init);
     const [count, setCount] = useState(0);
+    const [quantity, setQuantity] = useState(0);
 
 
     localStorage.setItem('items', JSON.stringify(data));
@@ -49,7 +50,9 @@ export const ItemsProvider = ({ children }) => {
                 items,
                 dispatch,
                 count,
-                setCount
+                setCount,
+                quantity,
+                setQuantity
             }}>
             {children}
         </ItemsContext.Provider>

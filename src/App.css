@@ -55,9 +55,9 @@ body {
   margin: 3px ;
   width: 50%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  border: 1px solid gray;
+  border: 0px solid gray;
   border-radius: 13px 3px;
   padding: 11px;
 }
@@ -85,6 +85,7 @@ body {
 .quantity{
   display: grid;
   grid-template-rows: 30px 30px 33px;
+  margin-left: 43px;
 }
 
 .quantity button{
@@ -139,4 +140,26 @@ body {
   box-shadow: 5px 5px black;
   transform: scale(2,2);
 
+}
+
+
+.count-circle{
+  padding: 7px;
+  width: 13px;
+  height: 19px;
+  border-radius: 100%;
+  color: #ffffff;
+  background-color: #9e3636;
+  position: absolute;
+  right: 19px;
+  top: 11px;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-circle span{
+  font-size: 17px;
+  
 }

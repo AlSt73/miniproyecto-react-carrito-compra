@@ -4,7 +4,7 @@ import { ItemsContext } from '../helpers/ItemsProvider';
 
 import image from '../images/image.png';
 const Bag = () => {
-    const { items, dispatch, count, setCount } = useContext(ItemsContext);
+    const { items, dispatch, count, setCount, setQuantity, quantity } = useContext(ItemsContext);
 
     const deleteItem = (e) => {
         const realKill = {
@@ -47,20 +47,26 @@ const Bag = () => {
     }
 
     const itemsPlus = () => {
+        let countQuantity = 0
         let s = items.map(i => {
             let suma = i.quantity * i.price;
+            countQuantity = i.quantity + countQuantity
+            console.log(countQuantity);
             return suma
         });
         let count = 0
         s.map((i, e) => {
             count = i + count
-            return count
+
         });
+
+        setQuantity(countQuantity);
         setCount(count);
     }
 
     const clearShop = () => {
         setCount(items.length = 0);
+        setQuantity(items.length = 0);
 
     }
     useEffect(() => {
